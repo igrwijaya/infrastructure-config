@@ -1,15 +1,15 @@
 version: '3.4'
 services:
   sqlserver:
-    image: mcr.microsoft.com/mssql/server:2017-latest
+    image: mcr.microsoft.com/mssql/server:2019-latest
     container_name: sqlserver
     environment:
      - ACCEPT_EULA=Y
-     - SA_PASSWORD=Temp123*
+     - SA_PASSWORD=Local123*
     ports:
-     - "1433:1433"
+     - "1434:1433"
     restart: always
     volumes:
-     - /Users/Ackerman/Work/Infrastructure/DockerVolume/SqlServer/data:/var/opt/mssql/data
-     - /Users/Ackerman/Work/Infrastructure/DockerVolume/SqlServer/secrets:/var/opt/mssql/secrets
-     - /Users/Ackerman/Work/Infrastructure/DockerVolume/SqlServer/log:/var/opt/mssql/log
+     - C:/Users/igrwi/Work/Infrastructure/DockerVolume/SqlServer2019/data:/var/opt/mssql/data
+     - C:/Users/igrwi/Work/Infrastructure/DockerVolume/SqlServer2019/secrets:/var/opt/mssql/secrets
+     - C:/Users/igrwi/Work/Infrastructure/DockerVolume/SqlServer2019/log:/var/opt/mssql/log
