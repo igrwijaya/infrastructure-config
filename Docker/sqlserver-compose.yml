@@ -10,6 +10,6 @@ services:
      - "1433:1433"
     restart: always
     volumes:
-     - /Users/Ackerman/Work/Infrastructure/DockerVolume/SqlServer/data:/var/opt/mssql/data
-     - /Users/Ackerman/Work/Infrastructure/DockerVolume/SqlServer/secrets:/var/opt/mssql/secrets
-     - /Users/Ackerman/Work/Infrastructure/DockerVolume/SqlServer/log:/var/opt/mssql/log
+     - F:/Infrastructure/ImageVolume/SqlServer/data:/var/opt/mssql/data
+     - F:/Infrastructure/ImageVolume/SqlServer/secrets:/var/opt/mssql/secrets
+     - F:/Infrastructure/ImageVolume/SqlServer/log:/var/opt/mssql/log
