@@ -4,6 +4,7 @@ services:
   mysqldb:
     image: mysql:8.0
     container_name: mysql-db
+    command: mysqld --max_allowed_packet=16777216
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: admin

@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  caddy:
+    image: caddy:alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - G:/Infrastructure/infrastructure-config/Docker/caddy/Caddyfile:/etc/caddy/Caddyfile
+    networks:
+      - web
+  ghost:
+    image: ghost:3.22-alpine
+    restart: unless-stopped
+    environment:
+      - url=https://hestara-ui.localhost
+    volumes:
+      - /data/myghostapp:/var/lib/ghost/content
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
